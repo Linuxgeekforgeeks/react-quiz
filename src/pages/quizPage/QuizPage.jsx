@@ -61,7 +61,11 @@ const handlePrev=()=>{
         return prev
     })
 }
+const handleSelectedAnswer=(selected)=>{
 
+    console.log(selected, "SelectedAnswer")
+
+}
     return (
         <div className="quiz-page">
             <div className="quiz-container">
@@ -74,7 +78,7 @@ const handlePrev=()=>{
 
 
             {questions[currentQuestion].choice.map((option,index)=>{
-                return <button key={index}>{option}</button>
+                return <button onClick={()=>handleSelectedAnswer(option)} key={index}>{option}</button>
             })}
             </div>
 
