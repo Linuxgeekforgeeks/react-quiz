@@ -51,6 +51,17 @@ const handleNext=()=>{
     )
 }
 
+
+const handlePrev=()=>{
+    setCurrentQuestion(prev=>{
+
+        if(prev>0){
+            return prev-1
+        }
+        return prev
+    })
+}
+
     return (
         <div className="quiz-page">
             <div className="quiz-container">
@@ -60,7 +71,7 @@ const handleNext=()=>{
            <div className="question">
             <h1>{questions[currentQuestion].question}</h1>
 
-            <button disabled={currentQuestion===0}>Prev</button> <button onClick={handleNext} disabled={currentQuestion===questions.length-1} >Next</button>
+            <button disabled={currentQuestion===0} onClick={handlePrev}>Prev</button> <button onClick={handleNext} disabled={currentQuestion===questions.length-1} >Next</button>
            </div>
             </div>
 
