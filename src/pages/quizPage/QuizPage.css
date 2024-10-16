@@ -14,3 +14,11 @@
     border-radius: .4rem;
 
 }
+
+.choice-div{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin-top: .9rem;
+    margin-bottom: .9rem;
+}

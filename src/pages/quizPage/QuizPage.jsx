@@ -70,6 +70,13 @@ const handlePrev=()=>{
             <h1>QuizPage</h1>
            <div className="question">
             <h1>{questions[currentQuestion].question}</h1>
+            <div className="choice-div">
+
+
+            {questions[currentQuestion].choice.map((option,index)=>{
+                return <button key={index}>{option}</button>
+            })}
+            </div>
 
             <button disabled={currentQuestion===0} onClick={handlePrev}>Prev</button> <button onClick={handleNext} disabled={currentQuestion===questions.length-1} >Next</button>
            </div>
