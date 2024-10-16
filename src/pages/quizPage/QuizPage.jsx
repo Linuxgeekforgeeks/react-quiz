@@ -4,6 +4,7 @@ import "./QuizPage.css"
 function QuizPage() {
 
     const [currentQuestion,setCurrentQuestion]=useState(0)
+    const [userAnswers,setUserAnswers]=useState([])
 
     const questions = [
         {

@@ -1,0 +1,23 @@
+.quiz-refresh{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-div{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+}
+.choices{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.choices> button:active, .choices button:focus{
+    background-color: aqua;
+    cursor: pointer;
+}
